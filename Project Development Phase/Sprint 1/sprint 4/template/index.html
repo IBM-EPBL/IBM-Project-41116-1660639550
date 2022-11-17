@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Early Detection Of Chronic Kidney Disease</title>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/Prediction.css">
+    </head>
+<style>
+    h1{ 
+  font-family: 'Open Sans-Bold';
+}
+form{
+	width:650px;
+    border-radius:10px;
+    padding:4px
+    
+    }
+select{
+	width: 500px;
+	border-radius:4px;
+    padding:12px 20px;
+    margin:8px 0;
+    display:inline-block;
+    box-sizing:border-box;
+    }
+button{
+	width:80px;
+    padding:10px;
+    font-family:'Open Sans-Bold';
+}
+</style>
+    <center>
+        <body>
+            <div id="demobox"> 
+                <h1>Early Detection Of Chronic Kidney Disease</h1>
+                </div>
+        <form method='POST' action='/predict'>
+        <div class="container">
+        <p>Enter values to predict!!</p>
+        <hr>
+        <label for="blood_urea"><b>Blood Urea:</b></label>
+        <br>
+        <input type="number" placeholder="Enter Blood Urea value" name="blood_urea" id="blood_urea" required>
+        <br>
+        <br>
+        <label for="blood glucose random"><b>Blood Glucose Random:</b></label>
+        <input type="number" placeholder="Enter Blood Glucose Random" name="blood glucose random" id="blood glucose random"required>
+        <br></br>
+            <label for="coronary_artery_disease"><b>Coronary Artery Disease:</b></label>
+            <br>
+            <select name="coronary_artery_disease" id="coronary_artery_disease">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <hr>
+            <label for="anemia"><b>Anemia:</b></label>
+            <br>
+            <select name="anemia" id="anemia">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <hr>
+            <label for="pus_cell"><b>Puscell:</b></label>
+            <br>
+            <select name="pus_cell" id="pus_cell">
+                <option value="Normal">Normal</option>
+                <option value="Abnormal">Abnormal</option>
+            </select>
+            <hr>
+            <label for="red_blood_cells"><b>Red Blood Cells:</b></label>
+            <br>
+            <select name="red_blood_cells" id="red_blood_cells">
+                <option value="Normal">Normal</option>
+                <option value="Abnormal">Abnormal</option>
+            </select>
+            <hr>        
+            <label for="diabetesmellitus"><b>DiabetesMellitus:</b></label>
+            <br>
+            <select name="diabetesmellitus" id="diabetesmellitus">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <hr>
+            <label for="pedal_edema"><b>PedalEdema:</b></label>
+            <br>
+            <select name="pedal_edema" id="pedal_edema">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <hr>
+            <button type="submit" class="registerbtn">Predict</button></div>
+        </form>
+</body>
+</center>
+</html>
